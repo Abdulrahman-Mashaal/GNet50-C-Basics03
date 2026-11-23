@@ -1,7 +1,8 @@
 ﻿using System.Drawing;
+using System.Runtime.Intrinsics.X86;
 using System.Security.Cryptography;
-using System.Threading.Channels;
 using System.Text;
+using System.Threading.Channels;
 
 namespace Session03
 {
@@ -176,15 +177,31 @@ namespace Session03
             #region Question 17
             //-Q17. Using the same books array, print every title except "The Pragmatic Programmer" (skip it with continue, don't stop the loop).
 
+            //string[] books = { "Clean Code", "The Pragmatic Programmer", "Refactoring" };
+            //foreach (string book in books)
+            //{
+            //    if (book == "The Pragmatic Programmer")
+            //    {
+            //        continue; // Skip this iteration and move to the next one
+            //    }
+            //    Console.WriteLine(book);
+            //}
+
+            #endregion
+            #region Question 18
+            //-Q18. Write a method PrintFirstBook() that prints the first book in the books array. If the array is empty, use return to exit the method early instead of printing anything.
+
             string[] books = { "Clean Code", "The Pragmatic Programmer", "Refactoring" };
-            foreach (string book in books)
+            void PrintFirstBook()
             {
-                if (book == "The Pragmatic Programmer")
+                if (books.Length == 0)
                 {
-                    continue; // Skip this iteration and move to the next one
+                    return; // Exit the method early if the array is empty
                 }
-                Console.WriteLine(book);
+
+                Console.WriteLine(books[0]);
             }
+            PrintFirstBook(); // Call the method to print the first book
 
             #endregion
         }
