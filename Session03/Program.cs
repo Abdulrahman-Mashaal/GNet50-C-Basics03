@@ -35,6 +35,11 @@ namespace Session03
             // Print the final result
             Console.WriteLine(sb.ToString());
             #endregion
+            #region Question 4
+            //-Q04. Using the StringBuilder from the question above, use Replace() to change "Book List" into "Library". Print the result.
+            sb.Replace("Book List", "Library");
+            Console.WriteLine(sb.ToString());
+            #endregion
         }
     }
 }
