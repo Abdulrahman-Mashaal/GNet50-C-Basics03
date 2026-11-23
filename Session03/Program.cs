@@ -26,19 +26,28 @@ namespace Session03
             #endregion
             #region Question 3
             ////-Q03. Create a StringBuilder, Append() the text "Book List", then Append() " - Updated" onto the same object.Print the final result.
-            // Using StringBuilder to efficiently build a string
-            StringBuilder sb = new StringBuilder();
-            // Append "Book List" to the StringBuilder
-            sb.Append("Book List");
-            // Append " - Updated" to the same StringBuilder object
-            sb.Append(" - Updated");
-            // Print the final result
-            Console.WriteLine(sb.ToString());
+            //// Using StringBuilder to efficiently build a string
+            //StringBuilder sb = new StringBuilder();
+            //// Append "Book List" to the StringBuilder
+            //sb.Append("Book List");
+            //// Append " - Updated" to the same StringBuilder object
+            //sb.Append(" - Updated");
+            //// Print the final result
+            //Console.WriteLine(sb.ToString());
             #endregion
             #region Question 4
-            //-Q04. Using the StringBuilder from the question above, use Replace() to change "Book List" into "Library". Print the result.
-            sb.Replace("Book List", "Library");
-            Console.WriteLine(sb.ToString());
+            ////-Q04. Using the StringBuilder from the question above, use Replace() to change "Book List" into "Library". Print the result.
+            //sb.Replace("Book List", "Library");
+            //Console.WriteLine(sb.ToString());
+            #endregion
+            #region Question 5
+            //-Q05. Given string title = "Clean Code"; and int pages = 464;, build the sentence "Book: Clean Code, Pages: 464" using the + operator.
+
+            string title = "Clean Code";
+            int pages = 464;
+            string sentence = "Book: " + title + ", Pages: " + pages;
+            Console.WriteLine(sentence);
+
             #endregion
         }
     }
