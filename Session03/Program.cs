@@ -150,12 +150,26 @@ namespace Session03
             #endregion
             #region Question 15
             //-Q15. Using the same books array, use a foreach loop to print every book title.
-            int index = 0;
+            //int index = 0;
+            //string[] books = { "Clean Code", "The Pragmatic Programmer", "Refactoring" };
+            //foreach (string book in books)
+            //{
+            //    Console.WriteLine($"{index + 1}. {books[index]}");
+            //    index++;
+            //}
+
+            #endregion
+            #region Question 16
+            //-Q16. Using the same books array, loop through it and print each title, but stop completely (break) once you reach "Refactoring".
+
             string[] books = { "Clean Code", "The Pragmatic Programmer", "Refactoring" };
             foreach (string book in books)
             {
-                Console.WriteLine($"{index + 1}. {books[index]}");
-                index++;
+                if (book == "Refactoring")
+                {
+                    break; // Stop the loop when "Refactoring" is reached
+                }
+                Console.WriteLine(book);
             }
 
             #endregion
