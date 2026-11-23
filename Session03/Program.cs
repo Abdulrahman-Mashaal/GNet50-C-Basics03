@@ -49,6 +49,13 @@ namespace Session03
             Console.WriteLine(sentence);
 
             #endregion
+            #region Question 6
+            //-Q06. Build the same sentence as above, but using string interpolation ($"...").
+
+            string interpolatedSentence = $"Book: {title}, Pages: {pages}";
+            Console.WriteLine(interpolatedSentence);
+
+            #endregion
         }
     }
 }
