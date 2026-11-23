@@ -56,6 +56,13 @@ namespace Session03
             Console.WriteLine(interpolatedSentence);
 
             #endregion
+            #region Question 7
+            //-Q07. Build the same sentence again, but using string.Format().
+
+            string formattedSentence = string.Format("Book: {0}, Pages: {1}", title, pages);
+            Console.WriteLine(formattedSentence);
+
+            #endregion
         }
     }
 }
