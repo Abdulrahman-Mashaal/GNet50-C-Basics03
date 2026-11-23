@@ -1,6 +1,7 @@
 ﻿using System.Drawing;
 using System.Security.Cryptography;
 using System.Threading.Channels;
+using System.Text;
 
 namespace Session03
 {
@@ -16,12 +17,23 @@ namespace Session03
             //Console.WriteLine("Uppercase title: " + upperTitle);
             #endregion
             #region Question 2
-            ////-Q01. Declare two separate string variables, both set to the literal "Clean Code". Use ReferenceEquals() to check if they point to the same object in memory.
-            string title1 = "Clean Code";
-            string title2 = "Clean Code";
-            // refers to the same string literal in memory due to string interning
-            bool areSame = ReferenceEquals(title1, title2);
-            Console.WriteLine("Do they point to the same object? " + areSame);
+            ////-Q02. Declare two separate string variables, both set to the literal "Clean Code". Use ReferenceEquals() to check if they point to the same object in memory.
+            //string title1 = "Clean Code";
+            //string title2 = "Clean Code";
+            //// refers to the same string literal in memory due to string interning
+            //bool areSame = ReferenceEquals(title1, title2);
+            //Console.WriteLine("Do they point to the same object? " + areSame);
+            #endregion
+            #region Question 3
+            ////-Q03. Create a StringBuilder, Append() the text "Book List", then Append() " - Updated" onto the same object.Print the final result.
+            // Using StringBuilder to efficiently build a string
+            StringBuilder sb = new StringBuilder();
+            // Append "Book List" to the StringBuilder
+            sb.Append("Book List");
+            // Append " - Updated" to the same StringBuilder object
+            sb.Append(" - Updated");
+            // Print the final result
+            Console.WriteLine(sb.ToString());
             #endregion
         }
     }
